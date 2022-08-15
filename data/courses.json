@@ -1,0 +1,35 @@
+[
+    {
+        "teacher": "Manuel Ledezma",
+        "title_course": "Curso de Postman",
+        "resume": "Bienvenido al curso de Postman de novato a experto, aquí aprenderás todo lo referente a Api testing.",
+        "tags": ["postman","automatizaciones","QA"],
+        "image":"https://oneimage.com/webf3939332.png",
+        "published": false
+    },
+    {
+        "teacher": "Manuel Ledezma",
+        "title_course": "Curso de Selenium WebDriver con Java",
+        "resume": "Bienvenido al curso de selenium de novato a experto, aquí aprenderás todo lo referente a UI testing.",
+        "tags": ["selenium","automatizaciones","QA"],
+        "image":"https://oneimage.com/webf3939332.png",
+        "published": true
+    },
+    {
+        "teacher": "Manuel Ledezma",
+        "title_course": "Curso de Selenium WebDriver con Python",
+        "resume": "Bienvenido al curso de selenium de novato a experto, aquí aprenderás todo lo referente a UI testing.",
+        "tags": ["selenium","automatizaciones","QA"],
+        "image":"https://oneimage.com/webf3939332.png",
+        "published": false
+    },
+    {
+        "teacher": "Manuel Ledezma",
+        "title_course": "Curso de Introducción al Testing",
+        "resume": "Bienvenido al curso de introducción al testing, aquí aprenderás todo lo referente a testing.",
+        "tags": ["testing","automatizaciones","QA"],
+        "image":"https://oneimage.com/webf3939332.png",
+        "published": false
+    }
+]
+

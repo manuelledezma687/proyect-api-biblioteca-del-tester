@@ -3,19 +3,20 @@ from pydantic import BaseModel, Field, EmailStr
 
 
 class Contact(BaseModel):
-    name: str = Field(
+    first_name: str = Field(
         ...,
         max_length=20,
-        example="Manuel"
+        example="Manuel Ledezma"
         )
     email: EmailStr = Field(
         ...,
-        example="Ledezma@gmail.com"
+        example="testing@gmail.com"
         )
     comments: str = Field(
         ...,
         max_length=100,
-        example="Hola esto es un comentario"
+        example="Hola estoy interesado en participar en el programa de incentivos de la págiona."
         )
     
-    message: str=Field(default="Login exitoso")
+class MessageSend(BaseModel):
+    message: str = Field(default="Envío de formulario exitoso")
