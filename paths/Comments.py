@@ -75,7 +75,7 @@ def post_comments(comment: Comments=Body(...)):
     status_code=status.HTTP_200_OK,
     summary="Borrar un comentario",
     tags=["Comentarios"])
-def delete_comment(post_id: UUID):
+def delete_comment(post_id):
     """
     ## This path operation delete a comment in the app.
 

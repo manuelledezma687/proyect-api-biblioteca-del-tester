@@ -39,8 +39,8 @@ class User(UserBase):
         le=99,
         example=34
         )
-    country: str = Field (min_length=4, max_length=20)
-    language: str = Field (min_length=4,max_length=20)
+    country: str = Field (min_length=4, max_length=20, example="Argentina")
+    language: str = Field (min_length=4,max_length=20, example="Español")
     ocupation: str = Field(
         min_length=0,
         max_length=50,

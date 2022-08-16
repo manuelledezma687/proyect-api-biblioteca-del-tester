@@ -37,7 +37,11 @@ def login(user: UserLogin = Body(...)):
     
     Returns a message confirmation.
     """
-    return UserLoginOk(message=message)
+    try:
+        return JSONResponse(status_code=200, content={'message': "Ingreso realizado, Bienvenido."})
+    except Exception as error:
+        print(error)
+        return JSONResponse(status_code=500, content={'message': "Ha ocurrido un error"})
 
 @router.post(
     path="/register", 
@@ -82,7 +86,6 @@ def post_user(user: UserRegister=Body(...)):
 
 @router.get(
     path="/users",
-    response_model=List[User],
     status_code=status.HTTP_200_OK,
     summary="Mostrar Usuarios",
     tags=["Usuarios"]
@@ -109,33 +112,6 @@ def show_users():
         results = json.loads(f.read())
         return results
     
-@router.get(
-    path="/users/{user_id}",
-    response_model=User,
-    status_code=status.HTTP_200_OK,
-    summary="Mostrar un Usuario",
-    tags=["Usuarios"]
-)
-def show_a_user():
-    """
-    ## This path operation shows an user in the app
-
-    Parameters: 
-        - 
-
-    Returns a json list with all users in the app, with the following keys: 
-        - user_id: UUID
-        - email: Emailstr
-        - username: str
-        - first_name: str
-        - last_name: str
-        - age: int
-        - country: List Optional
-        - language: List Optional
-        - Ocupation: str
-    """
-    pass
-
 @router.put(
     path="/users/{user_id}",
     response_model=User,
@@ -143,7 +119,7 @@ def show_a_user():
     summary="Actualizar un Usuario",
     tags=["Usuarios"]
 )
-def update_a_user(user_id): 
+def update_a_user(user_id, user: User = Body(...)): 
     """
     ## This path operation update an user in the app
 
@@ -161,7 +137,12 @@ def update_a_user(user_id):
         - language: List Optional
         - Ocupation: str
     """
-    pass
+    try:
+        return JSONResponse(status_code=200, content={'message': "Recurso Actualizado"})
+    except Exception as error:
+        print(error)
+        return JSONResponse(status_code=500, content={'message': "Ha ocurrido un error"})
+
 
 @router.delete(
     path="/users/{user_id}",
@@ -170,7 +151,7 @@ def update_a_user(user_id):
     summary="Borrar un Usuario",
     tags=["Usuarios"]
 )
-def delete_a_user(): 
+def delete_a_user(user_id): 
     """
     ## This path operation delete an user in the app
 
@@ -188,4 +169,8 @@ def delete_a_user():
         - language: List Optional
         - Ocupation: str
     """
-    pass
+    try:
+        return JSONResponse(status_code=200, content={'message': "Recurso eliminado"})
+    except Exception as error:
+        print(error)
+        return JSONResponse(status_code=500, content={'message': "Ha ocurrido un error"})

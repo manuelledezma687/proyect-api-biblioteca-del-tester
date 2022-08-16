@@ -30,17 +30,16 @@ def home():
             Registro.
             Actualización.
             Borrado de usuario.
-            Mostrar un usuario.
+            Mostrar un usuario. (Pendiente)
             Mostrar todos los usuarios.
         -Cursos: 
-            Mostrar un curso.
+            Mostrar un curso. (Pendiente)
             Mostrar todos los cursos.
             Publicar un curso.
             Actualizar un curso.
             Borrar un curso. 
         -Comentarios: 
             Mostrar todos los comentarios.
-            Mostrar un comentario.
             Postear un comentario. 
             Borrar un comentario.
         -Contacto directo: 
