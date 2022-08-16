@@ -3,8 +3,6 @@ from enum import Enum
 from uuid import UUID
 from pydantic import BaseModel, Field
 from pydantic import EmailStr
-from models.Countries import Countries
-from models.Language import Language
 
 
 class UserBase(BaseModel):
@@ -14,6 +12,7 @@ class UserBase(BaseModel):
         example="manuelledezma@gmail.com")
     
 class UserLoginOk(BaseModel):
+    
     message: str=Field(default="Login exitoso")
 
 class User(UserBase):

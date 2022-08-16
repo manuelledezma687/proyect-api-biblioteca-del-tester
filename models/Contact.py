@@ -1,5 +1,8 @@
-from fastapi import Form
+# Pydantic
 from pydantic import BaseModel, Field, EmailStr
+
+#FastApi
+from fastapi import Form
 
 
 class Contact(BaseModel):
@@ -18,5 +21,3 @@ class Contact(BaseModel):
         example="Hola estoy interesado en participar en el programa de incentivos de la págiona."
         )
     
-class MessageSend(BaseModel):
-    message: str = Field(default="Envío de formulario exitoso")
